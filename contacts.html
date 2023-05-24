@@ -184,32 +184,47 @@
             </div>
         </div>
         <!-- table -->
-        <div class="data-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="selectable-row">
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                        <td>
-                            <button class="btn-edit">Edit</button>
-                            <button class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                    <!-- Add more table rows as needed -->
-                </tbody>
+        <div class="table-container">
+            <div class="table-actions">
+              <label for="select-all">Select All</label>
+              <input type="checkbox" id="select-all">
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" class="row-checkbox"></td>
+                  <td>John Doe</td>
+                  <td>johndoe@example.com</td>
+                  <td>Admin</td>
+                  <td>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="row-checkbox"></td>
+                  <td>Jane Smith</td>
+                  <td>janesmith@example.com</td>
+                  <td>User</td>
+                  <td>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                  </td>
+                </tr>
+                <!-- Add more table rows as needed -->
+              </tbody>
             </table>
-        </div>
-
-
+          </div>
+          
         <div class="hover:text-[#594fc8] mt-8">Know more about your 1 anonymous contact <i
                 class="fa-solid fa-chevron-down pl-3"></i></div>
     </main>
@@ -236,28 +251,30 @@
     </script>
     <!-- table -->
     <script>
-        // Selectable table rows
-        document.querySelectorAll('.selectable-row').forEach(function (row) {
-            row.addEventListener('click', function () {
-                this.classList.toggle('selected');
-            });
-        });
+      const selectAllCheckbox = document.getElementById('select-all');
+const rowCheckboxes = document.querySelectorAll('.row-checkbox');
 
-        // Example event handling for edit and delete buttons
-        document.querySelectorAll('.btn-edit').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                // Handle edit action
-                console.log('Edit button clicked');
-            });
-        });
+// Select all checkboxes
+selectAllCheckbox.addEventListener('change', function() {
+  rowCheckboxes.forEach(function(checkbox) {
+    checkbox.checked = selectAllCheckbox.checked;
+  });
+});
 
-        document.querySelectorAll('.btn-delete').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                // Handle delete action
-                console.log('Delete button clicked');
-            });
-        });
+// Example event handling for edit and delete buttons
+document.querySelectorAll('.btn-edit').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    // Handle edit action
+    console.log('Edit button clicked');
+  });
+});
 
+document.querySelectorAll('.btn-delete').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    // Handle delete action
+    console.log('Delete button clicked');
+  });
+});
 
     </script>
 </body>
