@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/signup.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="sm:flex justify-between">
+            <div class="mt-5">
+                <img src="https://i.ibb.co/1TCBwBM/brevo-logo.png" alt="">
+            </div>
+            <div class="p-2">
+                <div class="flex justify-center items-center sm:w-[500px] !mx-auto sm:mt-24">
+                    <div>
+                        <h2 class="text-4xl font-semibold">Create your account. No credit card needed.</h2>
+                        <h5 class="mt-3 text-xl">Send your first emails in a few minutes. Already have an account?
+                            <a class="underline" href="/Login.html">Login</a>
+                        </h5>
+                        <div>
+                            <form id="signin_form">
+                                <div class="mb-1 mt-6 font-bold text-lg">Email<em class="text-[#ff0000]">*</em></div>
+                                <input type="text" id="username" required>
+                                <div class="mb-1 mt-4 font-bold text-lg">Password<em class="text-[#ff0000]">*</em></div>
+                                <div class="input-box">
+                                    <input type="password" id="password">
+                                    <img src="https://i.ibb.co/TrbpDVk/eye-close.png" alt="" id="eyeicon">
+                                </div>
+                                <button class="bg-[#1b1b1b] mt-3" type="submit" id="submitBtn" disabled>Login</button>
+                            </form>
+                            <!-- <div id="message" class="message"></div> -->
+                            <div class="flex gap-2 items-center mt-3">
+                                <hr>
+                                OR
+                                <hr>
+                            </div>
+                            <div class="flex items-center justify-center gap-4 border border-[#ccc] hover:bg-[#ffecee] p-1 rounded-xl mt-3">
+                                <img src="https://i.ibb.co/F8Zwqcn/google.png" alt="">
+                                <span class="font-semibold">sign in with Google </span>
+                            </div>
+                            <div class="flex items-center p-1 justify-center gap-4 border rounded-xl border-[#ccc] hover:bg-[#ffecee] mt-3">
+                                <img src="https://i.ibb.co/ZVKnvj1/apple.png" alt="">
+                                <span class="font-semibold">sign in with Apple</span>
+                            </div>
+                        </div>
+                        <h6 class="mt-5">By signing up, you are creating a Brevo account, and you agree to Brevo’s <a
+                                class="underline" href="/">Terms of Use</a> and <a class="underline" href="/">Privacy
+                                Policy</a>
+                            </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[500px] sm:block hidden">
+                <img src="https://i.ibb.co/Gnz1Rs9/sidebar-signup.webp" alt="">
+            </div>
+        </div>
+    </main>
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                eyeicon.src = "https://i.ibb.co/6cKrgYQ/eye-open.png";
+            }else{
+                password.type = "password";
+                eyeicon.src = "https://i.ibb.co/TrbpDVk/eye-close.png";
+            }
+        }
+    </script>
+    <script>
+        // Get references to the form and submit button
+        const form = document.getElementById('signin_form');
+        const submitBtn = document.getElementById('submitBtn');
+      
+        // Add event listener to the form
+        form.addEventListener('input', function() {
+          // Check if all required fields are filled
+          const isFormValid = form.checkValidity();
+      
+          // Enable or disable the submit button based on the form's validity
+          submitBtn.disabled = !isFormValid;
+        });
+      </script>
+</body>
+
+</html>
