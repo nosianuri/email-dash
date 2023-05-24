@@ -16,9 +16,9 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+/* form button:hover {
     background-color: #555;
-}
+} */
 
 .message {
     margin-top: 10px;
@@ -63,3 +63,16 @@ hr {
     width: 20px;
     cursor: pointer;
 }
+
+/* Styles for the disabled button */
+.disabled {
+    opacity: 0.5; /* Example styling, you can customize as needed */
+    cursor: not-allowed;
+  }
+  
+  /* Styles for the enabled button */
+  .enabled {
+    opacity: 1; /* Example styling, you can customize as needed */
+    cursor: pointer;
+  }
+  

@@ -33,7 +33,7 @@
                                     <input type="password" id="password">
                                     <img src="https://i.ibb.co/TrbpDVk/eye-close.png" alt="" id="eyeicon">
                                 </div>
-                                <button class="bg-[#1b1b1b] mt-3" type="submit" id="submitBtn" disabled>Login</button>
+                                <button class="disabled bg-[#1b1b1b] mt-3" type="submit" id="submitBtn" disabled>Login</button>
                             </form>
                             <!-- <div id="message" class="message"></div> -->
                             <div class="flex gap-2 items-center mt-3">
@@ -77,19 +77,27 @@
         }
     </script>
     <script>
-        // Get references to the form and submit button
-        const form = document.getElementById('signin_form');
-        const submitBtn = document.getElementById('submitBtn');
-      
-        // Add event listener to the form
-        form.addEventListener('input', function() {
-          // Check if all required fields are filled
-          const isFormValid = form.checkValidity();
-      
-          // Enable or disable the submit button based on the form's validity
-          submitBtn.disabled = !isFormValid;
-        });
-      </script>
+         // Get references to the form and submit button
+const form = document.getElementById('signin_form');
+const submitBtn = document.getElementById('submitBtn');
+
+// Add event listener to the form
+form.addEventListener('input', function() {
+  // Check if all required fields are filled
+  const isFormValid = form.checkValidity();
+
+  // Enable or disable the submit button based on the form's validity
+  if (isFormValid) {
+    submitBtn.classList.remove('disabled');
+    submitBtn.classList.add('enabled');
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.classList.remove('enabled');
+    submitBtn.classList.add('disabled');
+    submitBtn.disabled = true;
+  }
+});
+    </script>
 </body>
 
 </html>

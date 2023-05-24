@@ -1,51 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/index.css">
-    <title>Email Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <title>Email Dashboard</title>
+  <script src="js/index.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Dashboard</h1>
-      </header>
-      
-        <!-- Sidebar content goes here -->
-        <aside class="sidebar">
-            <nav>
-              <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Settings</a></li>
-              </ul>
-            </nav>
-          </aside>
-      <!-- Main content -->
-          <main class="main-content">
-            <section>
-              <h2>Welcome to the Dashboard</h2>
-              <p>This is the main content section of your dashboard.</p>
-            </section>
-          
-            <section>
-              <h2>Recent Orders</h2>
-              <!-- Add order data or a table here -->
-            </section>
-          
-            <section>
-              <h2>Website Traffic</h2>
-              <!-- Add charts or analytics data here -->
-            </section>
-          
-            <section>
-              <h2>User Activity</h2>
-              <!-- Add user activity log or statistics here -->
-            </section>
-          </main>
-          
+  <header>
+    <div class="flex justify-end items-center">
+      <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
+      <div><i class="fa-solid fa-circle-info px-2"></i></div>
+      <div><i class="fa-solid fa-user pl-2"></i></div>
+    </div>
+  </header>
+
+  <!-- Sidebar content goes here -->
+  <aside class="sidebar">
+
+    <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
+    <ul class="menu mt-8">
+      <li class="menu-item"><a href="#"><i class="fa-solid fa-house pr-1"></i>Home</a></li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-circle-user pr-1"></i>Contacts</a>
+        <ul class="submenu">
+          <li><a href="#">Lists</a></li>
+          <li><a href="#">Segments</a></li>
+          <li><a href="#">Landing pages</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-paper-plane pr-1"></i>Campaigns</a>
+        <ul class="submenu">
+          <li><a href="#">Email</a></li>
+          <li><a href="#">SMS</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Web push</a></li>
+          <li><a href="#">Facebook Ads</a></li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-code-compare pr-1"></i>Automations</a>
+        <ul class="submenu">
+          <li><a href="#">Logs</a></li>
+          <li><a href="#">Email templates</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-arrows-up-down-left-right pr-1"></i>Transactional</a>
+        <ul class="submenu">
+          <li><a href="#">Email</a>
+            <ul class="submenu">
+              <li><a href="#">Real time</a></li>
+              <li><a href="#">Statics</a></li>
+              <li><a href="#">Logs</a></li>
+              <li><a href="#">Templates</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SMS</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-chess-rook pr-1"></i>Conversations</a>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-dice-d6 pr-1"></i>Inbox</a>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-calendar-days pr-1"></i>Sales</a>
+        <ul class="submenu">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Tasks</a></li>
+          <li><a href="#">Companies</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#"><i class="fa-solid fa-box-archive pr-1"></i>Meetings</a>
+        <ul class="submenu">
+          <li><a href="#">Planned meetings</a></li>
+          <li><a href="#">Page editor</a></li>
+          <li><a href="#">Availability</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <!-- Main content -->
+  <main class="main-content">
+    <section>
+      <h2 class="text-4xl font-semibold mt-5 mx-10">Welcome back Nosia</h2>
+      <div class=" border border-[#333] rounded-xl m-10">
+        <div class="flex ">
+          <div class="px-3 py-3">
+            <h3 class="font-semibold text-xl ">Sendinblue becomes Brevo</h3>
+            <p class="mt-2 text-[17px]">Helping you connect with your contacts and clients is what we do. As we grew, we
+              added several new marketing channels and new ways to run your business, like meeting scheduling and a
+              Sales platform.</p>
+            <p class="mt-2 text-[17px]">Today, we're changing again. We got new colors, a new name, and a new look. Now,
+              we are Brevo.</p>
+            <p class="mt-2 text-[17px]">Also, to make it easier for you to get to your favorite features and discover
+              new ones, we've moved and improved the navigation.</p>
+            <p class="mt-2 text-[17px]">So, take a moment and take our guided tour to explore what’s new in Brevo.</p>
+
+            <div class="flex gap-8 mt-3">
+              <div class="hover:bg-[#ffecee] rounded-xl px-4 py-1 text-[#594fc8] font-semibold">Why we became Brevo
+              </div>
+              <div class="shadow-xl rounded-xl px-2 py-1 border border-[#333]">Take a tour</div>
+            </div>
+          </div>
+
+          <picture class="bg-[#e9fee0] relative min-w-[400px] overflow-hidden">
+            <img src="https://i.ibb.co/HHS8MYN/brevo-message-desktop-400px.webp" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <div class="sales  border border-[#333] rounded-t-lg mx-10 px-10 py-2">
+        <div class="flex justify-between">
+          <div class="font-bold text-2xl">Get started with Sales</div>
+          <div class="">
+            <button id="toggleBtn" class="closed w-full">
+              <span class="arrow-up"></span>
+              <!-- <span class="arrow-down"></span> -->
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul id="list" class="hidden border border-[#555] shadow-xl rounded-b-lg">
+        <li class="font-semibold"><i class="fa-solid fa-circle-check pr-2 !text-[#0b996f]"></i>Complete your profile
+          form</li>
+        <li class="border border-t-[#555] font-semibold"><i
+            class="fa-solid fa-circle-check pr-2 !text-[#0b996f]"></i>Add your first contacts</li>
+        <li class="border border-t-[#555]"><i class="fa-solid fa-circle-check pr-2 !text-[#0b996f]"></i><span
+            class="font-semibold">Add your first deal</span> <br>
+          Follow up on all your opportunities here and customize your deal’s pipeline and stages.</li>
+        <li class="border border-t-[#555]"><i class="fa-solid fa-circle-check pr-2 !text-[#0b996f]"></i><span
+            class="font-semibold">Add your first task</span> <br>
+          Keep a complete history of your relationships with your leads and customers.</li>
+      </ul>
+      <!-- <button id="toggleBtn">Toggle List</button>
+      <ul id="list" class="hidden">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+      </ul> -->
+
+
+    </section>
+
+    <section class=" pt-10 mx-10">
+      <div class="flex justify-between mb-5">
+        <div class="text-3xl">Contacts</div>
+        <div class="">
+          <div class="flex gap-5">
+            <div class="hover:bg-[#ffecee] px-2 py-1 rounded-xl font-bold">View all</div>
+            <div class="bg-[#333] hover:bg-[#555] text-[#fff] font-bold rounded-xl px-3 py-1">Add Contacts</div>
+            <div class="flex items-center">
+              <div class="border border-gray-300 h-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 bg-[#fff] border border-[#555] rounded-xl ">
+        <div class="border border-r-gray-500">
+          <div class="flex justify-between px-5 py-5">
+            <div>
+              <p class="text-4xl font-bold">13,750</p>
+            </div>
+            <img src="https://i.ibb.co/xgRtnwT/people-icon.png" alt="">
+          </div>
+          <p class="mt-1 mx-5">Total contacts</p>
+        </div>
+        <div>
+          <div class="flex justify-between px-5 py-5">
+            <div>
+              <p class="text-4xl font-bold">713</p>
+
+            </div>
+            <img src="https://i.ibb.co/ZGTzQNV/People-contacts.png" alt="">
+          </div>
+          <p class="mt-1 mx-5">New contacts over the last 30 days</p>
+        </div>
+      </div>
+    </section>
+
+<section class="mx-10 mt-16">
+  <div class="flex justify-between mb-5">
+    <div class="text-3xl">Recent campaigns</div>
+    <div class="">
+      <div class="flex gap-5">
+        <div class="hover:bg-[#ffecee] px-2 py-1 rounded-xl font-bold">View all</div>
+        <div class="bg-[#333] hover:bg-[#555] text-[#fff] font-bold rounded-xl px-3 py-1">Create a campaign</div>
+        <div class="flex items-center">
+          <div class="border border-gray-300 h-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border border-gray-300 rounded-xl">
+   <div class="flex justify-between p-2 border border-b-gray-300">
+    <h3 class="font-bold">Inbound Outreach 2
+      #25</h3>
+      <div>
+        <div class="flex gap-3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+   </div>
+   <div class="flex justify-between p-2 border border-b-gray-300">
+    <h3 class="font-bold">Outreach 02- Inbound only
+      #21</h3>
+      <div>
+        <div class="flex gap-3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+   </div>
+   <div class="flex justify-between p-2 border border-b-gray-300">
+    <h3 class="font-bold">Inbound Outreach
+      #17</h3>
+      <div>
+        <div class="flex gap-3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+   </div>
+   <div class="flex justify-between p-2 border border-b-gray-300">
+    <h3 class="font-bold">Publisher Outreach 02
+      #24</h3>
+      <div>
+        <div class="flex gap-3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+   </div>
+   <div class="flex justify-between p-2 border border-b-gray-300">
+    <h3 class="font-bold">Insurance Followup
+      #23</h3>
+      <div>
+        <div class="flex gap-3">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+   </div>
+   
+  </div>
+</section>
+
+    <section class="mt-16 mx-10">
+      <h2 class="font-bold text-3xl mb-5">Upcoming Sales Activities</h2>
+      <div class="text-center bg-[#ddd] border rounded-xl py-8">
+        <h3 class="font-bold text-2xl">Manage all your Sales activities in Brevo</h3>
+        <h5 class="my-3">Create or import your deals. Create companies and tasks.</h5>
+        <button class="bg-[#333] hover:bg-[#555] text-[#fff] font-bold rounded-xl px-3 py-1">Set up your new sales
+          CRM</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Get all menu items with submenus
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Add click event listener to each menu item
+    menuItems.forEach(function (menuItem) {
+      const submenu = menuItem.querySelector('.submenu');
+
+      // Add click event listener to the menu item
+      menuItem.addEventListener('click', function () {
+        // Toggle the submenu visibility
+        submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+      });
+    });
+
+  </script>
+  <!-- <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const list = document.getElementById('list');
+
+    toggleBtn.addEventListener('click', function () {
+      list.classList.toggle('hidden');
+    });
+
+  </script> -->
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const list = document.getElementById('list');
+
+    toggleBtn.addEventListener('click', function () {
+      list.classList.toggle('hidden');
+      toggleBtn.classList.toggle('closed');
+      toggleBtn.classList.toggle('open');
+    });
+
+  </script>
 </body>
+
 </html>
