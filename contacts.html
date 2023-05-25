@@ -18,11 +18,22 @@
         <div class="flex justify-end items-center">
             <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
             <div><i class="fa-solid fa-circle-info px-2"></i></div>
-            <div><i class="fa-solid fa-user pl-2"></i></div>
+            <!-- <div><i class="fa-solid fa-user pl-2"></i></div> -->
+            <div class="profile-menu">
+                <button id="profile-btn" class="profile-btn">
+                    <i class="fa-solid fa-user pl-2"></i>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <ul id="profile-menu-list" class="profile-menu-list">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- Sidebar content goes here -->
-    <aside class="sidebar">
+    <aside class="sidebar overscroll-contain">
 
         <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
         <ul class="menu !mt-8">
@@ -117,13 +128,13 @@
             <div class="hover:bg-[#ffecee] text-[#594fc8] px-3 py-1 rounded-xl font-bold">Load a list or a segment<i
                     class="fa-solid fa-chevron-down pl-3"></i></div>
         </div>
-        <div class="px-5 py-3 bg-[#ddd] rounded-xl mt-3">
-            <div class="border border-gray-500 !py-4 rounded-xl bg-[#fff]">
+        <div class="px-5 py-4 bg-[#ddd] rounded-xl mt-3">
+            <div class="border border-gray-500 !py-2 rounded-xl bg-[#fff]">
                 <button id="filterBtn"
                     class="border border-gray-500 font-bold rounded-xl w-[150px] text-center mx-3 shadow-xl py-1"><i
                         class="fa-solid fa-circle-plus pr-2"></i>Add a filter</button>
             </div>
-            <div id="searchOption" class="hidden ">
+            <div id="searchOption" class="hidden">
                 <div class="border border-gray-500 w-[300px] bg-[#fff] rounded-xl">
                     <div class="search-bar">
                         <input type="text" id="searchInput" placeholder="Search...">
@@ -162,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center mt-8">
             <div class="flex gap-4">
                 <div>13,750 contacts</div>
                 <div class="underline">1 anonymous contact</div>
@@ -184,51 +195,71 @@
             </div>
         </div>
         <!-- table -->
-        <div class="table-container">
-            <div class="table-actions">
+        <div class="table-container mt-10">
+            <!-- <div class="table-actions">
               <label for="select-all">Select All</label>
               <input type="checkbox" id="select-all">
-            </div>
+            </div> -->
             <table class="data-table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Role</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" class="row-checkbox"></td>
-                  <td>John Doe</td>
-                  <td>johndoe@example.com</td>
-                  <td>Admin</td>
-                  <td>
-                    <button class="btn-edit">Edit</button>
-                    <button class="btn-delete">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" class="row-checkbox"></td>
-                  <td>Jane Smith</td>
-                  <td>janesmith@example.com</td>
-                  <td>User</td>
-                  <td>
-                    <button class="btn-edit">Edit</button>
-                    <button class="btn-delete">Delete</button>
-                  </td>
-                </tr>
-                <!-- Add more table rows as needed -->
-              </tbody>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="table-actions">
+                                <label for="select-all">Select All</label>
+                                <input type="checkbox" id="select-all">
+                            </div>
+                        </th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox"></td>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>Admin</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox"></td>
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>User</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more table rows as needed -->
+                </tbody>
             </table>
-          </div>
-          
+        </div>
+
         <div class="hover:text-[#594fc8] mt-8">Know more about your 1 anonymous contact <i
                 class="fa-solid fa-chevron-down pl-3"></i></div>
     </main>
-
+    <script>
+        // Get all menu items with submenus
+        const menuItems = document.querySelectorAll('.menu-item');
+    
+        // Add click event listener to each menu item
+        menuItems.forEach(function (menuItem) {
+          const submenu = menuItem.querySelector('.submenu');
+    
+          // Add click event listener to the menu item
+          menuItem.addEventListener('click', function () {
+            // Toggle the submenu visibility
+            submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+          });
+        });
+    
+      </script>
     <script>
         const filterBtn = document.getElementById('filterBtn');
         const searchOption = document.getElementById('searchOption');
@@ -251,30 +282,46 @@
     </script>
     <!-- table -->
     <script>
-      const selectAllCheckbox = document.getElementById('select-all');
-const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+        const selectAllCheckbox = document.getElementById('select-all');
+        const rowCheckboxes = document.querySelectorAll('.row-checkbox');
 
-// Select all checkboxes
-selectAllCheckbox.addEventListener('change', function() {
-  rowCheckboxes.forEach(function(checkbox) {
-    checkbox.checked = selectAllCheckbox.checked;
-  });
-});
+        // Select all checkboxes
+        selectAllCheckbox.addEventListener('change', function () {
+            rowCheckboxes.forEach(function (checkbox) {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
 
-// Example event handling for edit and delete buttons
-document.querySelectorAll('.btn-edit').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    // Handle edit action
-    console.log('Edit button clicked');
-  });
-});
+        // Example event handling for edit and delete buttons
+        document.querySelectorAll('.btn-edit').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                // Handle edit action
+                console.log('Edit button clicked');
+            });
+        });
 
-document.querySelectorAll('.btn-delete').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    // Handle delete action
-    console.log('Delete button clicked');
-  });
-});
+        document.querySelectorAll('.btn-delete').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                // Handle delete action
+                console.log('Delete button clicked');
+            });
+        });
+
+    </script>
+    <!-- profile -->
+    <script>
+        var profileBtn = document.getElementById('profile-btn');
+        var profileMenuList = document.getElementById('profile-menu-list');
+
+        profileBtn.addEventListener('click', function () {
+            profileMenuList.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!profileBtn.contains(event.target)) {
+                profileMenuList.classList.remove('show');
+            }
+        });
 
     </script>
 </body>
