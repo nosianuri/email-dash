@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Settings</title>
+    <link rel="stylesheet" href="css/contact_settings.css">
+</head>
+<body>
+    <header>
+        <div class="flex justify-end items-center">
+          <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
+          <div><i class="fa-solid fa-circle-info px-2"></i></div>
+          <div><i class="fa-solid fa-user pl-2"></i></div>
+        </div>
+      </header>
+    
+      <!-- Sidebar content goes here -->
+      <aside class="sidebar">
+    
+        <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
+        <ul class="menu !mt-8">
+          <li class="menu-item"><a href="#"><i class="fa-solid fa-house pr-1"></i>Home</a></li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-circle-user pr-1"></i>Contacts</a>
+            <ul class="submenu">
+              <li><a href="#">Lists</a></li>
+              <li><a href="#">Segments</a></li>
+              <li><a href="#">Landing pages</a></li>
+              <li><a href="#">Forms</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-paper-plane pr-1"></i>Campaigns</a>
+            <ul class="submenu">
+              <li><a href="#">Email</a></li>
+              <li><a href="#">SMS</a></li>
+              <li><a href="#">WhatsApp</a></li>
+              <li><a href="#">Web push</a></li>
+              <li><a href="#">Facebook Ads</a></li>
+              <li><a href="#">Templates</a></li>
+              <li><a href="#">Statistics</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-code-compare pr-1"></i>Automations</a>
+            <ul class="submenu">
+              <li><a href="#">Logs</a></li>
+              <li><a href="#">Email templates</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-arrows-up-down-left-right pr-1"></i>Transactional</a>
+            <ul class="submenu">
+              <li><a href="#">Email</a>
+                <ul class="submenu">
+                  <li><a href="#">Real time</a></li>
+                  <li><a href="#">Statics</a></li>
+                  <li><a href="#">Logs</a></li>
+                  <li><a href="#">Templates</a></li>
+                  <li><a href="#">Settings</a></li>
+                </ul>
+              </li>
+              <li><a href="#">SMS</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-chess-rook pr-1"></i>Conversations</a>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-dice-d6 pr-1"></i>Inbox</a>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-calendar-days pr-1"></i>Sales</a>
+            <ul class="submenu">
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Tasks</a></li>
+              <li><a href="#">Companies</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#"><i class="fa-solid fa-box-archive pr-1"></i>Meetings</a>
+            <ul class="submenu">
+              <li><a href="#">Planned meetings</a></li>
+              <li><a href="#">Page editor</a></li>
+              <li><a href="#">Availability</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <!-- Main content -->
+    <main class="main-content">
+        <section>
+            <div class="border border-[#fff] border-b-[#555] py-5">
+                <h4 class="font-bold text-3xl">Contacts Settings</h4>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Get all menu items with submenus
+        const menuItems = document.querySelectorAll('.menu-item');
+    
+        // Add click event listener to each menu item
+        menuItems.forEach(function (menuItem) {
+          const submenu = menuItem.querySelector('.submenu');
+    
+          // Add click event listener to the menu item
+          menuItem.addEventListener('click', function () {
+            // Toggle the submenu visibility
+            submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+          });
+        });
+    
+      </script>
+</body>
+</html>
