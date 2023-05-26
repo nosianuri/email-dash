@@ -18,10 +18,12 @@
   <header>
     <div class="flex justify-end items-center">
       <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
-      <div><i class="fa-solid fa-circle-info px-2"></i></div>
+      <div class="hover:bg-[#efeefc] px-2 py-1 rounded-2xl"><i class="fa-solid fa-circle-info px-2"></i></div>
       <div class="navbar-profile" onclick="toggleProfile()">
-        <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl"><div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div></span>
-        <div class="profile-details" id="profile-details">
+        <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl">
+          <div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div>
+        </span>
+        <div class="profile-details z-50" id="profile-details">
           <!-- Profile details content goes here -->
           <p>User@email.com</p>
           <hr class="my-3">
@@ -39,7 +41,7 @@
   </header>
 
   <!-- Sidebar content goes here -->
-  <aside class="sidebar">
+  <aside class="sidebar sm:block hidden">
 
     <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
     <ul class="menu !mt-8">
@@ -119,7 +121,7 @@
   <!-- Main content -->
   <main class="main-content">
     <section>
-      <h2 class="text-4xl font-semibold mt-5 mx-10">Welcome back Nosia</h2>
+      <h2 class="text-4xl font-semibold mt-5 mx-10">Welcome back User</h2>
       <div class=" border border-[#333] rounded-xl m-10">
         <div class="flex ">
           <div class="px-3 py-3">
@@ -217,78 +219,78 @@
       </div>
     </section>
 
-<section class="mx-10 mt-16">
-  <div class="flex justify-between mb-5">
-    <div class="text-3xl">Recent campaigns</div>
-    <div class="">
-      <div class="flex gap-5">
-        <div class="hover:bg-[#ffecee] px-2 py-1 rounded-xl font-bold">View all</div>
-        <div class="bg-[#333] hover:bg-[#555] text-[#fff] font-bold rounded-xl px-3 py-1">Create a campaign</div>
-        <div class="flex items-center">
-          <div class="border border-gray-300 h-4"></div>
+    <section class="mx-10 mt-16">
+      <div class="flex justify-between mb-5">
+        <div class="text-3xl">Recent campaigns</div>
+        <div class="">
+          <div class="flex gap-5">
+            <div class="hover:bg-[#ffecee] px-2 py-1 rounded-xl font-bold">View all</div>
+            <div class="bg-[#333] hover:bg-[#555] text-[#fff] font-bold rounded-xl px-3 py-1">Create a campaign</div>
+            <div class="flex items-center">
+              <div class="border border-gray-300 h-4"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="border border-gray-300 rounded-xl">
-   <div class="flex justify-between p-2 border border-b-gray-300">
-    <h3 class="font-bold">Inbound Outreach 2
-      #25</h3>
-      <div>
-        <div class="flex gap-3">
-          <div></div>
-          <div></div>
-          <div></div>
+      <div class="border border-gray-300 rounded-xl">
+        <div class="flex justify-between p-2 border border-b-gray-300">
+          <h3 class="font-bold">Inbound Outreach 2
+            #25</h3>
+          <div>
+            <div class="flex gap-3">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
-      </div>
-   </div>
-   <div class="flex justify-between p-2 border border-b-gray-300">
-    <h3 class="font-bold">Outreach 02- Inbound only
-      #21</h3>
-      <div>
-        <div class="flex gap-3">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="flex justify-between p-2 border border-b-gray-300">
+          <h3 class="font-bold">Outreach 02- Inbound only
+            #21</h3>
+          <div>
+            <div class="flex gap-3">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
-      </div>
-   </div>
-   <div class="flex justify-between p-2 border border-b-gray-300">
-    <h3 class="font-bold">Inbound Outreach
-      #17</h3>
-      <div>
-        <div class="flex gap-3">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="flex justify-between p-2 border border-b-gray-300">
+          <h3 class="font-bold">Inbound Outreach
+            #17</h3>
+          <div>
+            <div class="flex gap-3">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
-      </div>
-   </div>
-   <div class="flex justify-between p-2 border border-b-gray-300">
-    <h3 class="font-bold">Publisher Outreach 02
-      #24</h3>
-      <div>
-        <div class="flex gap-3">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="flex justify-between p-2 border border-b-gray-300">
+          <h3 class="font-bold">Publisher Outreach 02
+            #24</h3>
+          <div>
+            <div class="flex gap-3">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
-      </div>
-   </div>
-   <div class="flex justify-between p-2 border border-b-gray-300">
-    <h3 class="font-bold">Insurance Followup
-      #23</h3>
-      <div>
-        <div class="flex gap-3">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="flex justify-between p-2 border border-b-gray-300">
+          <h3 class="font-bold">Insurance Followup
+            #23</h3>
+          <div>
+            <div class="flex gap-3">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
+
       </div>
-   </div>
-   
-  </div>
-</section>
+    </section>
 
     <section class="mt-16 mx-10">
       <h2 class="font-bold text-3xl mb-5">Upcoming Sales Activities</h2>
@@ -316,7 +318,7 @@
     });
 
   </script>
-  
+
   <script>
     const toggleBtn = document.getElementById('toggleBtn');
     const list = document.getElementById('list');
@@ -331,21 +333,21 @@
   <!-- profile -->
   <script>
     function toggleProfile() {
-var profileDetails = document.getElementById('profile-details');
-profileDetails.classList.toggle('show');
-}
+      var profileDetails = document.getElementById('profile-details');
+      profileDetails.classList.toggle('show');
+    }
 
-// Close profile details when clicking outside
-window.addEventListener('click', function(event) {
-var profileDetails = document.getElementById('profile-details');
-var navbarProfile = document.querySelector('.navbar-profile');
+    // Close profile details when clicking outside
+    window.addEventListener('click', function (event) {
+      var profileDetails = document.getElementById('profile-details');
+      var navbarProfile = document.querySelector('.navbar-profile');
 
-if (!navbarProfile.contains(event.target)) {
- profileDetails.classList.remove('show');
-}
-});
+      if (!navbarProfile.contains(event.target)) {
+        profileDetails.classList.remove('show');
+      }
+    });
 
- </script>
+  </script>
 </body>
 
 </html>

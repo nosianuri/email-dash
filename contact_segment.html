@@ -17,23 +17,25 @@
     <header>
         <div class="flex justify-end items-center">
             <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
-            <div><i class="fa-solid fa-circle-info px-2"></i></div>
+            <div class="hover:bg-[#efeefc] px-2 py-1 rounded-2xl"><i class="fa-solid fa-circle-info px-2"></i></div>
             <div class="navbar-profile" onclick="toggleProfile()">
-                <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl"><div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div></span>
-                <div class="profile-details" id="profile-details">
-                  <!-- Profile details content goes here -->
-                  <p>User@email.com</p>
-                  <hr class="my-3">
-                  <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
-                  <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
-                  <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
-                  <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
-                  <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
-                  <hr class="my-3">
-                  <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
-                  <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
+                <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl">
+                    <div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div>
+                </span>
+                <div class="profile-details z-50" id="profile-details">
+                    <!-- Profile details content goes here -->
+                    <p>User@email.com</p>
+                    <hr class="my-3">
+                    <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
+                    <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
+                    <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
+                    <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
+                    <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
+                    <hr class="my-3">
+                    <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
+                    <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
                 </div>
-              </div>
+            </div>
         </div>
     </header>
 
@@ -132,8 +134,11 @@
                         <h3 class="font-bold text-lg">Your saved filters are now archived here</h3>
                         <p class="pr-5">All saved filters created in the previous version of the Contact page are listed
                             here after all your segments. They are labeled as archived. <br>
-                            <span class="underline">Read more about archived filters</span> <i class="fa-solid fa-pen-to-square pl-2"></i></p>
+                            <span class="underline">Read more about archived filters</span> <i
+                                class="fa-solid fa-pen-to-square pl-2"></i>
+                        </p>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -141,7 +146,8 @@
             <div class="flex justify-between mt-10 mb-5">
                 <div class="text-3xl font-semibold">0 Segments</div>
                 <div class="flex gap-5 items-center">
-                    <div class="font-semibold border border-[#555] rounded px-4 py-1 shadow-lg mt-[-8px]">All categories</div>
+                    <div class="font-semibold border border-[#555] rounded px-4 py-1 shadow-lg mt-[-8px]">All categories
+                    </div>
                     <div>
                         <div class="search-container">
                             <input type="text" class="border border-gray-400" id="search-input" placeholder="Search...">
@@ -263,21 +269,21 @@
     <!-- profile -->
     <script>
         function toggleProfile() {
-   var profileDetails = document.getElementById('profile-details');
-   profileDetails.classList.toggle('show');
- }
- 
- // Close profile details when clicking outside
- window.addEventListener('click', function(event) {
-   var profileDetails = document.getElementById('profile-details');
-   var navbarProfile = document.querySelector('.navbar-profile');
- 
-   if (!navbarProfile.contains(event.target)) {
-     profileDetails.classList.remove('show');
-   }
- });
- 
-     </script>
+            var profileDetails = document.getElementById('profile-details');
+            profileDetails.classList.toggle('show');
+        }
+
+        // Close profile details when clicking outside
+        window.addEventListener('click', function (event) {
+            var profileDetails = document.getElementById('profile-details');
+            var navbarProfile = document.querySelector('.navbar-profile');
+
+            if (!navbarProfile.contains(event.target)) {
+                profileDetails.classList.remove('show');
+            }
+        });
+
+    </script>
 </body>
 
 </html>

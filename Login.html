@@ -16,14 +16,14 @@
                 <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="mx-auto w-32">
             </div>
             <div class="sendinblue">
-            <div class="flex border items-center justify-center rounded-xl mb-8 bg-[#fff]">
-                <img src="https://i.ibb.co/JBkzBRZ/sendinblue.png" alt="">
-                <div class="p-5">
-                    <h4 class="font-semibold text-lg">Sendinblue is now Brevo</h4>
-                    <p class="mt-2">We're the same, with a new look  and <br> easier navigation.</p>
+                <div class="flex border items-center justify-center rounded-xl mb-8 bg-[#fff]">
+                    <img src="https://i.ibb.co/JBkzBRZ/sendinblue.png" alt="">
+                    <div class="p-5">
+                        <h4 class="font-semibold text-lg">Sendinblue is now Brevo</h4>
+                        <p class="mt-2">We're the same, with a new look and <br> easier navigation.</p>
+                    </div>
                 </div>
             </div>
-        </div>
             <div class="login_container ">
                 <div class="login-form rounded-xl">
                     <h1 class="text-2xl font-semibold mb-2">Login</h1>
@@ -31,12 +31,12 @@
                         <div class="mb-1 font-bold">Email address</div>
                         <input type="text" id="username" required>
                         <div class="mb-1 mt-4 font-bold">Password</div>
-                       <div class="input-box">
-                        <input type="password" id="password" >
-                        <img src="https://i.ibb.co/TrbpDVk/eye-close.png" alt="" id="eyeicon">
-                       </div>
+                        <div class="input-box">
+                            <input type="password" id="password">
+                            <img src="https://i.ibb.co/TrbpDVk/eye-close.png" alt="" id="eyeicon">
+                        </div>
                         <!-- <input type="password" id="password" required> -->
-                        
+
                         <button class="bg-[#1b1b1b] mt-3" type="submit">Login</button>
                     </form>
 
@@ -83,11 +83,11 @@
         let eyeicon = document.getElementById("eyeicon");
         let password = document.getElementById("password");
 
-        eyeicon.onclick = function(){
-            if(password.type == "password"){
+        eyeicon.onclick = function () {
+            if (password.type == "password") {
                 password.type = "text";
                 eyeicon.src = "https://i.ibb.co/6cKrgYQ/eye-open.png";
-            }else{
+            } else {
                 password.type = "password";
                 eyeicon.src = "https://i.ibb.co/TrbpDVk/eye-close.png";
             }
@@ -96,21 +96,21 @@
     <!-- profile -->
     <script>
         function toggleProfile() {
-   var profileDetails = document.getElementById('profile-details');
-   profileDetails.classList.toggle('show');
- }
- 
- // Close profile details when clicking outside
- window.addEventListener('click', function(event) {
-   var profileDetails = document.getElementById('profile-details');
-   var navbarProfile = document.querySelector('.navbar-profile');
- 
-   if (!navbarProfile.contains(event.target)) {
-     profileDetails.classList.remove('show');
-   }
- });
- 
-     </script>
+            var profileDetails = document.getElementById('profile-details');
+            profileDetails.classList.toggle('show');
+        }
+
+        // Close profile details when clicking outside
+        window.addEventListener('click', function (event) {
+            var profileDetails = document.getElementById('profile-details');
+            var navbarProfile = document.querySelector('.navbar-profile');
+
+            if (!navbarProfile.contains(event.target)) {
+                profileDetails.classList.remove('show');
+            }
+        });
+
+    </script>
 </body>
 
 </html>

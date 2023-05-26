@@ -33,7 +33,8 @@
                                     <input type="password" id="password">
                                     <img src="https://i.ibb.co/TrbpDVk/eye-close.png" alt="" id="eyeicon">
                                 </div>
-                                <button class="disabled bg-[#1b1b1b] mt-3" type="submit" id="submitBtn" disabled>Login</button>
+                                <button class="disabled bg-[#1b1b1b] mt-3" type="submit" id="submitBtn"
+                                    disabled>Login</button>
                             </form>
                             <!-- <div id="message" class="message"></div> -->
                             <div class="flex gap-2 items-center mt-3">
@@ -41,11 +42,13 @@
                                 OR
                                 <hr>
                             </div>
-                            <div class="flex items-center justify-center gap-4 border border-[#ccc] hover:bg-[#ffecee] p-1 rounded-xl mt-3">
+                            <div
+                                class="flex items-center justify-center gap-4 border border-[#ccc] hover:bg-[#ffecee] p-1 rounded-xl mt-3">
                                 <img src="https://i.ibb.co/F8Zwqcn/google.png" alt="">
                                 <span class="font-semibold">sign in with Google </span>
                             </div>
-                            <div class="flex items-center p-1 justify-center gap-4 border rounded-xl border-[#ccc] hover:bg-[#ffecee] mt-3">
+                            <div
+                                class="flex items-center p-1 justify-center gap-4 border rounded-xl border-[#ccc] hover:bg-[#ffecee] mt-3">
                                 <img src="https://i.ibb.co/ZVKnvj1/apple.png" alt="">
                                 <span class="font-semibold">sign in with Apple</span>
                             </div>
@@ -53,7 +56,7 @@
                         <h6 class="mt-5">By signing up, you are creating a Brevo account, and you agree to Brevo’s <a
                                 class="underline" href="/">Terms of Use</a> and <a class="underline" href="/">Privacy
                                 Policy</a>
-                            </h6>
+                        </h6>
                     </div>
                 </div>
             </div>
@@ -66,56 +69,56 @@
         let eyeicon = document.getElementById("eyeicon");
         let password = document.getElementById("password");
 
-        eyeicon.onclick = function(){
-            if(password.type == "password"){
+        eyeicon.onclick = function () {
+            if (password.type == "password") {
                 password.type = "text";
                 eyeicon.src = "https://i.ibb.co/6cKrgYQ/eye-open.png";
-            }else{
+            } else {
                 password.type = "password";
                 eyeicon.src = "https://i.ibb.co/TrbpDVk/eye-close.png";
             }
         }
     </script>
     <script>
-         // Get references to the form and submit button
-const form = document.getElementById('signin_form');
-const submitBtn = document.getElementById('submitBtn');
+        // Get references to the form and submit button
+        const form = document.getElementById('signin_form');
+        const submitBtn = document.getElementById('submitBtn');
 
-// Add event listener to the form
-form.addEventListener('input', function() {
-  // Check if all required fields are filled
-  const isFormValid = form.checkValidity();
+        // Add event listener to the form
+        form.addEventListener('input', function () {
+            // Check if all required fields are filled
+            const isFormValid = form.checkValidity();
 
-  // Enable or disable the submit button based on the form's validity
-  if (isFormValid) {
-    submitBtn.classList.remove('disabled');
-    submitBtn.classList.add('enabled');
-    submitBtn.disabled = false;
-  } else {
-    submitBtn.classList.remove('enabled');
-    submitBtn.classList.add('disabled');
-    submitBtn.disabled = true;
-  }
-});
+            // Enable or disable the submit button based on the form's validity
+            if (isFormValid) {
+                submitBtn.classList.remove('disabled');
+                submitBtn.classList.add('enabled');
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.classList.remove('enabled');
+                submitBtn.classList.add('disabled');
+                submitBtn.disabled = true;
+            }
+        });
     </script>
     <!-- profile -->
     <script>
         function toggleProfile() {
-   var profileDetails = document.getElementById('profile-details');
-   profileDetails.classList.toggle('show');
- }
- 
- // Close profile details when clicking outside
- window.addEventListener('click', function(event) {
-   var profileDetails = document.getElementById('profile-details');
-   var navbarProfile = document.querySelector('.navbar-profile');
- 
-   if (!navbarProfile.contains(event.target)) {
-     profileDetails.classList.remove('show');
-   }
- });
- 
-     </script>
+            var profileDetails = document.getElementById('profile-details');
+            profileDetails.classList.toggle('show');
+        }
+
+        // Close profile details when clicking outside
+        window.addEventListener('click', function (event) {
+            var profileDetails = document.getElementById('profile-details');
+            var navbarProfile = document.querySelector('.navbar-profile');
+
+            if (!navbarProfile.contains(event.target)) {
+                profileDetails.classList.remove('show');
+            }
+        });
+
+    </script>
 </body>
 
 </html>

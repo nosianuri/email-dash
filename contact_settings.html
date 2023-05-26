@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,109 +12,112 @@
     <title>Contact Settings</title>
     <link rel="stylesheet" href="css/contact_settings.css">
 </head>
+
 <body>
     <header>
         <div class="flex justify-end items-center">
-          <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
-          <div><i class="fa-solid fa-circle-info px-2"></i></div>
-          <div class="navbar-profile" onclick="toggleProfile()">
-            <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl"><div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div></span>
-            <div class="profile-details" id="profile-details">
-              <!-- Profile details content goes here -->
-              <p>User@email.com</p>
-              <hr class="my-3">
-              <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
-              <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
-              <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
-              <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
-              <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
-              <hr class="my-3">
-              <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
-              <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
+            <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
+            <div class="hover:bg-[#efeefc] px-2 py-1 rounded-2xl"><i class="fa-solid fa-circle-info px-2"></i></div>
+            <div class="navbar-profile" onclick="toggleProfile()">
+                <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl">
+                    <div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div>
+                </span>
+                <div class="profile-details" id="profile-details">
+                    <!-- Profile details content goes here -->
+                    <p>User@email.com</p>
+                    <hr class="my-3">
+                    <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
+                    <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
+                    <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
+                    <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
+                    <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
+                    <hr class="my-3">
+                    <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
+                    <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
+                </div>
             </div>
-          </div>
         </div>
-      </header>
-    
-      <!-- Sidebar content goes here -->
-      <aside class="sidebar">
-    
+    </header>
+
+    <!-- Sidebar content goes here -->
+    <aside class="sidebar">
+
         <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
         <ul class="menu !mt-8">
-          <li class="menu-item"><a href="#"><i class="fa-solid fa-house pr-1"></i>Home</a></li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-circle-user pr-1"></i>Contacts</a>
-            <ul class="submenu">
-              <li><a href="#">Lists</a></li>
-              <li><a href="#">Segments</a></li>
-              <li><a href="#">Landing pages</a></li>
-              <li><a href="#">Forms</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-paper-plane pr-1"></i>Campaigns</a>
-            <ul class="submenu">
-              <li><a href="#">Email</a></li>
-              <li><a href="#">SMS</a></li>
-              <li><a href="#">WhatsApp</a></li>
-              <li><a href="#">Web push</a></li>
-              <li><a href="#">Facebook Ads</a></li>
-              <li><a href="#">Templates</a></li>
-              <li><a href="#">Statistics</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-code-compare pr-1"></i>Automations</a>
-            <ul class="submenu">
-              <li><a href="#">Logs</a></li>
-              <li><a href="#">Email templates</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-arrows-up-down-left-right pr-1"></i>Transactional</a>
-            <ul class="submenu">
-              <li><a href="#">Email</a>
+            <li class="menu-item"><a href="#"><i class="fa-solid fa-house pr-1"></i>Home</a></li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-circle-user pr-1"></i>Contacts</a>
                 <ul class="submenu">
-                  <li><a href="#">Real time</a></li>
-                  <li><a href="#">Statics</a></li>
-                  <li><a href="#">Logs</a></li>
-                  <li><a href="#">Templates</a></li>
-                  <li><a href="#">Settings</a></li>
+                    <li><a href="#">Lists</a></li>
+                    <li><a href="#">Segments</a></li>
+                    <li><a href="#">Landing pages</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Settings</a></li>
                 </ul>
-              </li>
-              <li><a href="#">SMS</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-chess-rook pr-1"></i>Conversations</a>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-dice-d6 pr-1"></i>Inbox</a>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-calendar-days pr-1"></i>Sales</a>
-            <ul class="submenu">
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Tasks</a></li>
-              <li><a href="#">Companies</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#"><i class="fa-solid fa-box-archive pr-1"></i>Meetings</a>
-            <ul class="submenu">
-              <li><a href="#">Planned meetings</a></li>
-              <li><a href="#">Page editor</a></li>
-              <li><a href="#">Availability</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-paper-plane pr-1"></i>Campaigns</a>
+                <ul class="submenu">
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">SMS</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Web push</a></li>
+                    <li><a href="#">Facebook Ads</a></li>
+                    <li><a href="#">Templates</a></li>
+                    <li><a href="#">Statistics</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-code-compare pr-1"></i>Automations</a>
+                <ul class="submenu">
+                    <li><a href="#">Logs</a></li>
+                    <li><a href="#">Email templates</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-arrows-up-down-left-right pr-1"></i>Transactional</a>
+                <ul class="submenu">
+                    <li><a href="#">Email</a>
+                        <ul class="submenu">
+                            <li><a href="#">Real time</a></li>
+                            <li><a href="#">Statics</a></li>
+                            <li><a href="#">Logs</a></li>
+                            <li><a href="#">Templates</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SMS</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-chess-rook pr-1"></i>Conversations</a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-dice-d6 pr-1"></i>Inbox</a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-calendar-days pr-1"></i>Sales</a>
+                <ul class="submenu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-box-archive pr-1"></i>Meetings</a>
+                <ul class="submenu">
+                    <li><a href="#">Planned meetings</a></li>
+                    <li><a href="#">Page editor</a></li>
+                    <li><a href="#">Availability</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
         </ul>
-      </aside>
-      <!-- Main content -->
+    </aside>
+    <!-- Main content -->
     <main class="main-content">
         <section>
             <div class="border border-[#fff] border-b-[#555] py-5">
@@ -139,7 +143,8 @@
                 <img src="https://i.ibb.co/dBtYfxp/contact.png" alt="">
                 <div>
                     <h5 class="font-semibold text-lg">Unengaged contacts</h5>
-                    <p>Improve your deliverability and engagement rates by excluding the unengaged contacts from your campaigns.</p>
+                    <p>Improve your deliverability and engagement rates by excluding the unengaged contacts from your
+                        campaigns.</p>
                 </div>
             </div>
         </section>
@@ -147,36 +152,37 @@
     <script>
         // Get all menu items with submenus
         const menuItems = document.querySelectorAll('.menu-item');
-    
+
         // Add click event listener to each menu item
         menuItems.forEach(function (menuItem) {
-          const submenu = menuItem.querySelector('.submenu');
-    
-          // Add click event listener to the menu item
-          menuItem.addEventListener('click', function () {
-            // Toggle the submenu visibility
-            submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
-          });
+            const submenu = menuItem.querySelector('.submenu');
+
+            // Add click event listener to the menu item
+            menuItem.addEventListener('click', function () {
+                // Toggle the submenu visibility
+                submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+            });
         });
-    
-      </script>
-      <!-- profile -->
+
+    </script>
+    <!-- profile -->
     <script>
         function toggleProfile() {
-   var profileDetails = document.getElementById('profile-details');
-   profileDetails.classList.toggle('show');
- }
- 
- // Close profile details when clicking outside
- window.addEventListener('click', function(event) {
-   var profileDetails = document.getElementById('profile-details');
-   var navbarProfile = document.querySelector('.navbar-profile');
- 
-   if (!navbarProfile.contains(event.target)) {
-     profileDetails.classList.remove('show');
-   }
- });
- 
-     </script>
+            var profileDetails = document.getElementById('profile-details');
+            profileDetails.classList.toggle('show');
+        }
+
+        // Close profile details when clicking outside
+        window.addEventListener('click', function (event) {
+            var profileDetails = document.getElementById('profile-details');
+            var navbarProfile = document.querySelector('.navbar-profile');
+
+            if (!navbarProfile.contains(event.target)) {
+                profileDetails.classList.remove('show');
+            }
+        });
+
+    </script>
 </body>
+
 </html>

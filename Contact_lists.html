@@ -17,23 +17,25 @@
     <header>
         <div class="flex justify-end items-center">
             <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
-            <div><i class="fa-solid fa-circle-info px-2"></i></div>
+            <div class="hover:bg-[#efeefc] px-2 py-1 rounded-2xl"><i class="fa-solid fa-circle-info px-2"></i></div>
             <div class="navbar-profile" onclick="toggleProfile()">
-                <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl"><div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div></span>
+                <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl">
+                    <div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div>
+                </span>
                 <div class="profile-details" id="profile-details">
-                  <!-- Profile details content goes here -->
-                  <p>User@email.com</p>
-                  <hr class="my-3">
-                  <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
-                  <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
-                  <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
-                  <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
-                  <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
-                  <hr class="my-3">
-                  <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
-                  <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
+                    <!-- Profile details content goes here -->
+                    <p>User@email.com</p>
+                    <hr class="my-3">
+                    <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
+                    <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
+                    <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
+                    <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
+                    <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
+                    <hr class="my-3">
+                    <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
+                    <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
                 </div>
-              </div>
+            </div>
         </div>
     </header>
 
@@ -136,16 +138,18 @@
                             <option value="">create a new folder</option>
                         </select>
                     </div>
-                    <button class="border border-gray-400 px-4 rounded-xl"><i class="fa-solid fa-pen-fancy"></i></button>
+                    <button class="border border-gray-400 px-4 rounded-xl"><i
+                            class="fa-solid fa-pen-fancy"></i></button>
                     <button class="border border-gray-400 px-4 rounded-xl"><i class="fa-solid fa-trash"></i></button>
                     <div class="text-lg font-bold">1 List & 1 Contact</div>
                 </div>
                 <div>
                     <div class="search-container">
                         <input type="text" class="border border-gray-400" id="search-input" placeholder="Search...">
-                        <button class="border border-gray-400 rounded" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                      </div>
-                      <ul id="list"></ul>
+                        <button class="border border-gray-400 rounded" id="search-button"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <ul id="list"></ul>
                 </div>
             </div>
             <p class="text-[#555] italic">You have currently 4 folder(s) and 14 list(s)</p>
@@ -153,24 +157,25 @@
         <section class="mt-10">
             <table id="my-table">
                 <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>NUMBER OF CONTACTS</th>
-                    <th>ACTIONS</th>
-                  </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>NUMBER OF CONTACTS</th>
+                        <th>ACTIONS</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>#19</td>
-                    <td>Contacts involved in conversations</td>
-                    <td>1 Contact</td>
-                    <td><button class="border border-[#555] px-3 py-1 rounded-xl font-semibold">Actions</button></td>
-                  </tr>
-                  
-                  <!-- Add more rows here -->
+                    <tr>
+                        <td>#19</td>
+                        <td>Contacts involved in conversations</td>
+                        <td>1 Contact</td>
+                        <td><button class="border border-[#555] px-3 py-1 rounded-xl font-semibold">Actions</button>
+                        </td>
+                    </tr>
+
+                    <!-- Add more rows here -->
                 </tbody>
-              </table>
+            </table>
         </section>
     </main>
     <script>
@@ -218,21 +223,21 @@
     <!-- profile -->
     <script>
         function toggleProfile() {
-   var profileDetails = document.getElementById('profile-details');
-   profileDetails.classList.toggle('show');
- }
- 
- // Close profile details when clicking outside
- window.addEventListener('click', function(event) {
-   var profileDetails = document.getElementById('profile-details');
-   var navbarProfile = document.querySelector('.navbar-profile');
- 
-   if (!navbarProfile.contains(event.target)) {
-     profileDetails.classList.remove('show');
-   }
- });
- 
-     </script>
+            var profileDetails = document.getElementById('profile-details');
+            profileDetails.classList.toggle('show');
+        }
+
+        // Close profile details when clicking outside
+        window.addEventListener('click', function (event) {
+            var profileDetails = document.getElementById('profile-details');
+            var navbarProfile = document.querySelector('.navbar-profile');
+
+            if (!navbarProfile.contains(event.target)) {
+                profileDetails.classList.remove('show');
+            }
+        });
+
+    </script>
 </body>
 
 </html>
