@@ -140,4 +140,32 @@ header h1 {
   #my-table th {
     font-weight: bold;
   }
+  /* profile */
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+  }
   
+  .profile-icon {
+    display: inline-block;
+    /* width: 30px;
+    height: 30px; */
+    /* background-color: #ddd; */
+    /* border-radius: 50%; */
+  }
+  
+  .profile-details {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0px #333;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    width: 150px;
+  }
+  
+  .profile-details.show {
+    display: block;
+  }

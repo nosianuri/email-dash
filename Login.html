@@ -93,7 +93,24 @@
             }
         }
     </script>
-    
+    <!-- profile -->
+    <script>
+        function toggleProfile() {
+   var profileDetails = document.getElementById('profile-details');
+   profileDetails.classList.toggle('show');
+ }
+ 
+ // Close profile details when clicking outside
+ window.addEventListener('click', function(event) {
+   var profileDetails = document.getElementById('profile-details');
+   var navbarProfile = document.querySelector('.navbar-profile');
+ 
+   if (!navbarProfile.contains(event.target)) {
+     profileDetails.classList.remove('show');
+   }
+ });
+ 
+     </script>
 </body>
 
 </html>

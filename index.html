@@ -19,7 +19,22 @@
     <div class="flex justify-end items-center">
       <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
       <div><i class="fa-solid fa-circle-info px-2"></i></div>
-      <div><i class="fa-solid fa-user pl-2"></i></div>
+      <div class="navbar-profile" onclick="toggleProfile()">
+        <span class="profile-icon hover:bg-[#efeefc] px-2 py-2 rounded-2xl"><div class="flex"><i class="fa-solid fa-user px-2"></i><i class="fa fa-caret-down"></i></div></span>
+        <div class="profile-details" id="profile-details">
+          <!-- Profile details content goes here -->
+          <p>User@email.com</p>
+          <hr class="my-3">
+          <p><i class="fa-solid fa-gear pr-2"></i>Settings</p>
+          <p><i class="fa-regular fa-paper-plane pr-2"></i>Senders & IP</p>
+          <p><i class="fa-brands fa-mendeley pr-2"></i>SMTP & API</p>
+          <p><i class="fa-solid fa-people-arrows pr-2"></i>Users</p>
+          <p><i class="fa-solid fa-shield-halved pr-2"></i>Security</p>
+          <hr class="my-3">
+          <p><i class="fa-solid fa-repeat pr-2"></i>Switch account</p>
+          <p><i class="fa-solid fa-right-from-bracket pr-2"></i>Log out</p>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -301,15 +316,7 @@
     });
 
   </script>
-  <!-- <script>
-    const toggleBtn = document.getElementById('toggleBtn');
-    const list = document.getElementById('list');
-
-    toggleBtn.addEventListener('click', function () {
-      list.classList.toggle('hidden');
-    });
-
-  </script> -->
+  
   <script>
     const toggleBtn = document.getElementById('toggleBtn');
     const list = document.getElementById('list');
@@ -321,6 +328,24 @@
     });
 
   </script>
+  <!-- profile -->
+  <script>
+    function toggleProfile() {
+var profileDetails = document.getElementById('profile-details');
+profileDetails.classList.toggle('show');
+}
+
+// Close profile details when clicking outside
+window.addEventListener('click', function(event) {
+var profileDetails = document.getElementById('profile-details');
+var navbarProfile = document.querySelector('.navbar-profile');
+
+if (!navbarProfile.contains(event.target)) {
+ profileDetails.classList.remove('show');
+}
+});
+
+ </script>
 </body>
 
 </html>
