@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Segment</title>
+    <link rel="stylesheet" href="css/contact_segment.css">
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-end items-center">
+            <h1 class="hover:bg-[#ffecee]"><i class="fa-solid fa-wave-square pr-1"></i>Usage and plan</h1>
+            <div><i class="fa-solid fa-circle-info px-2"></i></div>
+            <div><i class="fa-solid fa-user pl-2"></i></div>
+        </div>
+    </header>
+
+    <!-- Sidebar content goes here -->
+    <aside class="sidebar">
+        <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
+        <ul class="menu !mt-8">
+            <li class="menu-item"><a href="#"><i class="fa-solid fa-house pr-1"></i>Home</a></li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-circle-user pr-1"></i>Contacts</a>
+                <ul class="submenu">
+                    <li><a href="#">Lists</a></li>
+                    <li><a href="#">Segments</a></li>
+                    <li><a href="#">Landing pages</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-paper-plane pr-1"></i>Campaigns</a>
+                <ul class="submenu">
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">SMS</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Web push</a></li>
+                    <li><a href="#">Facebook Ads</a></li>
+                    <li><a href="#">Templates</a></li>
+                    <li><a href="#">Statistics</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-code-compare pr-1"></i>Automations</a>
+                <ul class="submenu">
+                    <li><a href="#">Logs</a></li>
+                    <li><a href="#">Email templates</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-arrows-up-down-left-right pr-1"></i>Transactional</a>
+                <ul class="submenu">
+                    <li><a href="#">Email</a>
+                        <ul class="submenu">
+                            <li><a href="#">Real time</a></li>
+                            <li><a href="#">Statics</a></li>
+                            <li><a href="#">Logs</a></li>
+                            <li><a href="#">Templates</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SMS</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-chess-rook pr-1"></i>Conversations</a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-dice-d6 pr-1"></i>Inbox</a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-calendar-days pr-1"></i>Sales</a>
+                <ul class="submenu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-box-archive pr-1"></i>Meetings</a>
+                <ul class="submenu">
+                    <li><a href="#">Planned meetings</a></li>
+                    <li><a href="#">Page editor</a></li>
+                    <li><a href="#">Availability</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- Main content -->
+    <main class="main-content">
+        <section class=" my-5">
+            <div class="flex justify-between">
+                <div class="text-4xl font-bold">Segments</div>
+                <div class="bg-[#333] hover:bg-[#555] font-bold text-lg text-[#fff] rounded-xl px-4 py-2"><i
+                        class="fa-solid fa-plus"></i> Create a segment</div>
+            </div>
+        </section>
+        <section>
+            <div id="warning-box">
+                <span class="close-button">&times;</span>
+                <div class="flex gap-4">
+                    <div><i class="fa-solid fa-triangle-exclamation text-[#6358de]"></i></div>
+                    <div>
+                        <h3 class="font-bold">Your saved filters are now archived here</h3>
+                        <p class="pr-5">All saved filters created in the previous version of the Contact page are listed
+                            here after all your segments. They are labeled as archived.
+                            Read more about archived filters <i class="fa-solid fa-pen-to-square pl-2"></i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="flex justify-between mt-10 mb-5">
+                <div class="text-3xl font-semibold">0 Segments</div>
+                <div class="flex gap-5 items-center">
+                    <div class="font-semibold border border-[#555] rounded px-4 py-1 shadow-lg mt-[-8px]">All categories</div>
+                    <div>
+                        <div class="search-container">
+                            <input type="text" class="border border-gray-400" id="search-input" placeholder="Search...">
+                            <button class="border border-gray-400 rounded" id="search-button"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <ul id="list"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="mb-8" id="table-container">
+                <table id="my-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table data will be dynamically added here -->
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="bg-[#eff2f7] rounded py-10 flex justify-center items-center">
+                <div id="empty-message">
+                    <div class="flex justify-center items-center">
+                        <div>
+                            <img src="https://i.ibb.co/6td1bqz/Curent-removebg-preview.png" alt="" class="w-1/2">
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-lg">You don't have any segments</h5>
+                            <h6 class="font-semibold">Please create a new segment.</h6>
+                        </div>
+                    </div>.
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Get all menu items with submenus
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Add click event listener to each menu item
+        menuItems.forEach(function (menuItem) {
+            const submenu = menuItem.querySelector('.submenu');
+
+            // Add click event listener to the menu item
+            menuItem.addEventListener('click', function () {
+                // Toggle the submenu visibility
+                submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+
+    </script>
+    <!-- segment warning -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var closeButton = document.querySelector('.close-button');
+            var warningBox = document.getElementById('warning-box');
+
+            function closeWarning() {
+                warningBox.style.display = 'none';
+            }
+
+            closeButton.addEventListener('click', closeWarning);
+        });
+
+    </script>
+    <!-- search -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var searchInput = document.getElementById('search-input');
+            var searchButton = document.getElementById('search-button');
+            var list = document.getElementById('list');
+            var items = Array.from(list.getElementsByTagName('li'));
+
+            function filterList() {
+                var searchTerm = searchInput.value.toLowerCase();
+
+                items.forEach(function (item) {
+                    var itemText = item.textContent.toLowerCase();
+                    if (itemText.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            searchButton.addEventListener('click', filterList);
+            searchInput.addEventListener('input', filterList);
+        });
+
+    </script>
+    <!-- table -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var table = document.getElementById('my-table');
+            var emptyMessage = document.getElementById('empty-message');
+
+            function checkDataAvailability() {
+                var tbody = table.querySelector('tbody');
+                if (tbody && tbody.childElementCount === 0) {
+                    emptyMessage.style.display = 'block';
+                } else {
+                    emptyMessage.style.display = 'none';
+                }
+            }
+
+            checkDataAvailability();
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    /* color: #fff !important; */
+}
+
+header h1 {
+    /* font-size: 20px; */
+    color: #333;
+    padding: 1px 10px;
+    /* border: 1px solid #333; */
+    border-radius: 15px;
+    margin: 0px 10px;
+}
+
+.sidebar {
+    background-color: #f4eed7;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 20px;
+    display: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #555;
+}
+
+#toggleBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Warning box styles */
+#warning-box {
+    position: relative;
+    background-color: #dbd9f7;
+    color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Hover effect for close button */
+.close-button:hover {
+    color: #000;
+}
+
+
+/* search */
+.search-container {
+    margin-bottom: 10px;
+}
+
+#search-input {
+    padding: 5px;
+    width: 200px;
+}
+
+#search-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+}
+ /* table */
+  
+ #table-container {
+    position: relative;
+  }
+  
+  #empty-message {
+    /* position: relative;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* font-weight: bold;
+    font-size: 18px; */
+    color: #555;
+    display: none;
+  }
+  
+  #my-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #my-table th,
+  #my-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Header row styles */
+  #my-table thead {
+    background-color: #f2f2f2;
+  }
+  
+  #my-table th {
+    font-weight: bold;
+  }
+  
