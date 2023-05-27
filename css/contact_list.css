@@ -155,8 +155,26 @@ header {
       padding: 5px;
       /* text-align: left; */
     }
-    .overflow-x-scroll {
-        overflow-x: auto;
-        width: 100%;
-      }
+    /* .overflow-x-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+    } */
   }
+  /* @media screen and (max-width: 600px) {
+    table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    
+    th,
+    td {
+      display: block;
+      text-align: left;
+    }
+    
+    th {
+      font-weight: bold;
+    }
+  } */
