@@ -40,7 +40,7 @@
     </header>
 
     <!-- Sidebar content goes here -->
-    <aside class="sidebar">
+    <aside class="sidebar sm:block hidden">
         <img src="https://i.ibb.co/V3TkLwZ/brevo.png" alt="" class="w-24">
         <ul class="menu !mt-8">
             <li class="menu-item"><a href="#"><i class="fa-solid fa-house pr-1"></i>Home</a></li>
@@ -120,8 +120,8 @@
     <main class="main-content">
         <section class=" my-5">
             <div class="flex justify-between">
-                <div class="text-4xl font-bold">Segments</div>
-                <div class="bg-[#333] hover:bg-[#555] font-bold text-lg text-[#fff] rounded-xl px-4 py-2"><i
+                <div class="sm:text-4xl text-2xl font-bold">Segments</div>
+                <div class="bg-[#333] hover:bg-[#555] font-bold sm:text-lg text-[#fff] rounded-xl px-4 py-2"><i
                         class="fa-solid fa-plus"></i> Create a segment</div>
             </div>
         </section>
@@ -143,9 +143,9 @@
             </div>
         </section>
         <section>
-            <div class="flex justify-between mt-10 mb-5">
+            <div class="sm:flex justify-between mt-10 mb-5 space-y-5 sm:space-y-0">
                 <div class="text-3xl font-semibold">0 Segments</div>
-                <div class="flex gap-5 items-center">
+                <div class="sm:flex gap-5 items-center space-y-5 sm:space-y-0">
                     <div class="font-semibold border border-[#555] rounded px-4 py-1 shadow-lg mt-[-8px]">All categories
                     </div>
                     <div>
@@ -154,14 +154,14 @@
                             <button class="border border-gray-400 rounded" id="search-button"><i
                                     class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
-                        <ul id="list"></ul>
+                        <!-- <ul id="list"></ul> -->
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div class="mb-8" id="table-container">
-                <table id="my-table">
+            <div class="mb-8 " id="table-container">
+                <table class="overflow-auto" id="my-table">
                     <thead>
                         <tr>
                             <th>segment</th>

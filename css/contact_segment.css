@@ -170,3 +170,17 @@ header h1 {
   .profile-details.show {
     display: block;
   }
+  @media screen and (max-width: 780px) {
+    .sidebar {
+      width: 0px;
+    }
+    .main-content {
+      margin-left: 0px;
+      padding: 2px;
+    }
+    #my-table th,
+    #my-table td {
+      padding: 5px 10px;
+      /* text-align: left; */
+    }
+  }

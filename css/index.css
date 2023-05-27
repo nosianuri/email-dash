@@ -1,129 +1,133 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Basic styling */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-  }
-  
-  header {
-    background-color: #fff;
-    padding: 10px 20px;
-    /* color: #fff !important; */
-  }
-  
-  header h1 {
-    /* font-size: 20px; */
-    color: #333;
-    padding: 5px 15px;
-    /* border: 1px solid #333; */
-    border-radius: 15px;
-    margin: 0px 10px;
-  }
-  
-  .sidebar {
-    background-color: #f4eed7;
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .main-content {
-    margin-left: 250px;
-    padding: 20px;
-  }
-  
-  .menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu-item a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .submenu {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 20px;
-    display: none;
-  }
-  
-  .submenu li a {
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-    color: #555;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  #toggleBtn {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .arrow-up, .arrow-down {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px;
-    margin-left: 5px;
-    vertical-align: middle;
-    transition: transform 0.3s;
-  }
-  
-  .closed .arrow-up {
-    border-color: transparent transparent #000;
-    transform: rotate(-135deg);
-  }
-  
-  .closed .arrow-down {
-    border-color: #000 transparent transparent;
-    transform: rotate(45deg);
-  }
-  
-  .open .arrow-up {
-    border-color: #000 transparent transparent;
-    transform: rotate(45deg);
-  }
-  
-  .open .arrow-down {
-    border-color: transparent transparent #000;
-    transform: rotate(-135deg);
-  }
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
 
-  #list{
-    margin: 0px 40px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
+header {
+  background-color: #fff;
+  padding: 10px 20px;
+  /* color: #fff !important; */
+}
 
-  #list li{
-    padding: 10px 20px;
-    /* border: 1px solid #555; */
-    /* border-radius: 0 0 10px 10px; */
-  }
-  #list li:hover{
-    /* opacity: .5; */
-    background-color: #ddd;
-  }
-  .sales{
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  /* profile */
+header h1 {
+  /* font-size: 20px; */
+  color: #333;
+  padding: 5px 15px;
+  /* border: 1px solid #333; */
+  border-radius: 15px;
+  margin: 0px 10px;
+}
+
+.sidebar {
+  background-color: #f4eed7;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.submenu {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 20px;
+  display: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #555;
+}
+
+#toggleBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.arrow-up,
+.arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px;
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.closed .arrow-up {
+  border-color: transparent transparent #000;
+  transform: rotate(-135deg);
+}
+
+.closed .arrow-down {
+  border-color: #000 transparent transparent;
+  transform: rotate(45deg);
+}
+
+.open .arrow-up {
+  border-color: #000 transparent transparent;
+  transform: rotate(45deg);
+}
+
+.open .arrow-down {
+  border-color: transparent transparent #000;
+  transform: rotate(-135deg);
+}
+
+#list {
+  margin: 0px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#list li {
+  padding: 10px 20px;
+  /* border: 1px solid #555; */
+  /* border-radius: 0 0 10px 10px; */
+}
+
+#list li:hover {
+  /* opacity: .5; */
+  background-color: #ddd;
+}
+
+.sales {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* profile */
 .navbar-profile {
   position: relative;
   cursor: pointer;
@@ -151,4 +155,14 @@
 
 .profile-details.show {
   display: block;
+}
+
+@media screen and (max-width: 780px) {
+  .sidebar {
+    width: 0px;
+  }
+  .main-content {
+    margin-left: 0px;
+    padding: 2px;
+  }
 }
