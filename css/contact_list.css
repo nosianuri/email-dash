@@ -178,3 +178,21 @@ header {
       font-weight: bold;
     }
   } */
+
+  /* hidden sidebar */
+
+#hidden-sidebar {
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  transition: left 0.3s ease;
+}
+
+#hidden-sidebar.open {
+  left: 0;
+}
+
+/* hidden sidebar */
